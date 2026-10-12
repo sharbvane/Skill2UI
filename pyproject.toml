@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skill2ui"
+version = "0.1.0"
+description = "Turn requests and Agent Skills into interactive, executable interfaces."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1", "pydantic>=2.10,<3", "PyYAML>=6,<7", "python-multipart>=0.0.20,<1", "httpx>=0.28,<1"]
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.30,<2"]
+
+[project.scripts]
+skill2ui = "skill2ui.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["skill2ui*"]
+
+[tool.setuptools.package-data]
+skill2ui = ["web/*", "web/mcp/*", "agent/skill2ui/*", "agent/skill2ui/references/*", "agent/skill2ui/scripts/*"]
