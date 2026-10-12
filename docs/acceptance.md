@@ -36,4 +36,4 @@ V0.1基础GUI已经可运行，超过三类交互经过浏览器验证。V0.2静
 
 已批准代码保留用户磁盘/网络权限；Windows Job Object只管理进程生命周期。输入文件可在授权后变化；脚本自行输出的文件仍可能含敏感信息。日志过滤不可能覆盖脚本从磁盘读取的未知秘密。具体边界见[security.md](security.md)。
 
-仓库提交和v0.1.0标签保留在本地；没有创建GitHub仓库、公开Release或发布站点。
+源码和v0.1.0发行包已发布到[公开GitHub仓库](https://github.com/sharbvane/Skill2UI/releases/tag/v0.1.0)。公开Release不改变上文的测试边界：真实付费模型、生产宿主内嵌、Linux/macOS和OS沙箱都未验证。

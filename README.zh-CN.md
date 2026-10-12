@@ -4,6 +4,8 @@
 
 [English](README.md) · [技术调研](docs/research.md) · [架构](docs/architecture.md) · [验收](docs/acceptance.md) · [安全边界](docs/security.md)
 
+[GitHub 源码仓库](https://github.com/sharbvane/Skill2UI) · [v0.1.0 发布页](https://github.com/sharbvane/Skill2UI/releases/tag/v0.1.0) · [Python 安装包](https://github.com/sharbvane/Skill2UI/releases/download/v0.1.0/skill2ui-0.1.0-py3-none-any.whl) · [SHA-256 校验](https://github.com/sharbvane/Skill2UI/releases/download/v0.1.0/SHA256SUMS.txt)
+
 ![实际运行的 AA 计算器](docs/images/calculator.png)
 
 v0.1.0 是首个可运行版本。包含标准 Agent Skill、Python GUI Runtime、无需前端构建的浏览器工作台、CLI/API 和可选 MCP Apps 适配，采用 MIT 许可证。

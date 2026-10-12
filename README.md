@@ -4,6 +4,8 @@
 
 [中文说明](README.zh-CN.md) · [Research](docs/research.md) · [Architecture](docs/architecture.md) · [Acceptance](docs/acceptance.md) · [Security](docs/security.md)
 
+[GitHub repository](https://github.com/sharbvane/Skill2UI) · [v0.1.0 release](https://github.com/sharbvane/Skill2UI/releases/tag/v0.1.0) · [Python wheel](https://github.com/sharbvane/Skill2UI/releases/download/v0.1.0/skill2ui-0.1.0-py3-none-any.whl) · [SHA-256 checksums](https://github.com/sharbvane/Skill2UI/releases/download/v0.1.0/SHA256SUMS.txt)
+
 ![The running Skill2UI workbench](docs/images/calculator.png)
 
 An independent MIT project: standard Agent Skill, lightweight Python runtime, zero-build browser workbench, CLI/API, and optional MCP Apps adapter. **0.1.0 is the first runnable release**, not universal execution compatibility.
