@@ -1,0 +1,31 @@
+// Run: node skill2ui/web/selfcheck.mjs
+import assert from 'node:assert/strict';
+import { parseCSV, derivedData, initialState, parameterId, savedSnapshot } from './render.js';
+
+assert.deepEqual(parseCSV('label,value\n"A, B",20\n"C ""quoted""",30'), [{ label: 'A, B', value: '20' }, { label: 'C "quoted"', value: '30' }]);
+assert.deepEqual(parseCSV('label,value\r\n一月,0\r\n'), [{ label: '一月', value: '0' }]);
+assert.throws(() => parseCSV('label,value\n"open,10'), /未闭合/);
+assert.throws(() => parseCSV('label,value\nA,1,2'), /列数/);
+assert.throws(() => parseCSV('__proto__,value\nA,1'), /列名/);
+const data = { kind: 'data', data: [] };
+assert.deepEqual(derivedData(data, { dataset: 'label,value\nAlpha,10\nBeta,20', filter: 'alp' }), [{ label: 'Alpha', value: 10 }]);
+assert.throws(() => derivedData(data, { dataset: 'label,value\nA,bad' }), /有效数字/);
+const evaluation = { kind: 'evaluation' };
+assert.deepEqual(derivedData(evaluation, { cost: 50, quality: 25, speed: 25, scores: 'label,cost,quality,speed\nA,80,60,100\nB,100,80,60' }), [{ label: 'B', value: 85 }, { label: 'A', value: 80 }]);
+assert.throws(() => derivedData(evaluation, { cost: 0, quality: 0, speed: 0, scores: '' }), /至少/);
+const oldDoc = { components: [{ id: 'amount', type: 'number', value: 100 }, { id: 'chart_type', type: 'select', value: 'bar' }] };
+const nextDoc = { components: [{ id: 'advanced', type: 'group', children: [{ id: 'amount', type: 'number', value: 100 }] }, { id: 'chart_type', type: 'select', value: 'line' }, { id: 'new', type: 'slider', value: 50 }] };
+const state = initialState(nextDoc, { amount: 360, chart_type: 'bar', 'done:task': true }, oldDoc);
+assert.equal(state.amount, 360);
+assert.equal(state.chart_type, 'line');
+assert.equal(state.new, 50);
+assert.equal(state['done:task'], true);
+assert.equal(parameterId({ id: 'convert.pdf' }, { name: 'input-file' }), 'p_convert_pdf_input-file');
+const secretDoc = { components: [{ id: 'api_key', type: 'text', label: 'API Key', value: 'default-secret' }], actions: [{ id: 'run', parameters: [{ name: 'password', label: '密码', type: 'string', default: 'secret' }] }] };
+const snapshot = savedSnapshot(secretDoc, { api_key: 'live-secret', p_run_password: 'another-secret', total: 120 });
+assert.deepEqual(snapshot.state, { total: 120 });
+assert.equal(snapshot.document.components[0].value, '');
+assert.equal(snapshot.document.actions[0].parameters[0].default, undefined);
+assert.equal(secretDoc.components[0].value, 'default-secret');
+assert.equal(initialState(snapshot.document, { api_key: 'live-secret' }, secretDoc).api_key, 'live-secret');
+console.log('Frontend self-check: 19 assertions passed.');

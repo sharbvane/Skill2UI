@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.png binary
+*.pdf binary
+*.docx binary
+*.xlsx binary
+*.pptx binary
+examples/third-party/documents/** -text

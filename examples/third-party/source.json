@@ -1,0 +1,105 @@
+{
+  "source": "https://github.com/magnus919/agent-skills",
+  "commit": "fb3253335cdb1156522901ef52f9897212b2e4b5",
+  "retrieved": "2026-10-12",
+  "license": "MIT",
+  "upstream_files": [
+    {
+      "path": "LICENSE.md",
+      "git_blob_sha": "9745e19f4b20d77c134964ae1bf0af0ace5c4db7",
+      "sha256": "22fa3b1ec405fe440e86d0d293ce21de0c637ebc37f263dbe3032ee47215cfe2"
+    },
+    {
+      "path": "documents/README.md",
+      "git_blob_sha": "d85ae78b3d73c615ba752678e4b78c370e9c1558",
+      "sha256": "4334c159752b204fe5ebeeed362abe3ea1bf501b76f9b47d544b263feb221621"
+    },
+    {
+      "path": "documents/SKILL.md",
+      "git_blob_sha": "5f966823de89571f8fcfcee1aab3dae99eba5ead",
+      "sha256": "210e8572af3b6ed9afe2ebc64ebde645c591fba6526ac3ab570c57d8e568e7ae"
+    },
+    {
+      "path": "documents/evals/evals.json",
+      "git_blob_sha": "d7aacff94a973ab0f398ca91c763fe000c438314",
+      "sha256": "6d7816b83e9541dfdd01cadb2e6e52d89530ebba78fbb753286093bb14375bdc"
+    },
+    {
+      "path": "documents/fixtures/sample.docx",
+      "git_blob_sha": "20750a9b02b8c160ed7afdcb090d9549b8b735de",
+      "sha256": "3a86ff518eb68c7492d2ad60a285a84ae84770cea0d8667a1a2fdfa754f41cd2"
+    },
+    {
+      "path": "documents/fixtures/sample.pdf",
+      "git_blob_sha": "7fe925f6b982403aa69eeca0c6b18daae52637be",
+      "sha256": "eed065e3d6aa43ffab0e72b866af48755f31b3b9f436717557d3ea0fed9f70bb"
+    },
+    {
+      "path": "documents/fixtures/sample.pptx",
+      "git_blob_sha": "2fed73d3a32a9a47c3ef44d5cafaa0684b8a66f5",
+      "sha256": "78ece92ea0fd0984f4b3b5829a3a2db81302aac55e3e7751733937a1e4c34c49"
+    },
+    {
+      "path": "documents/fixtures/sample.xlsx",
+      "git_blob_sha": "01290b07cd09fe25f501287e8c7f731b44a454d8",
+      "sha256": "bd9eb8d0fb4875b3fa4564475f1624ef6fb52b99bc51d90c51ad0ff9fac4c352"
+    },
+    {
+      "path": "documents/references/excel.md",
+      "git_blob_sha": "97c319691f2f3e7f454c24e49a3796224cc10a15",
+      "sha256": "37232b9e736eb83b0ced5bdba94606d3f976ff17c66eac6b49ee9273402f2d5f"
+    },
+    {
+      "path": "documents/references/output-quality.md",
+      "git_blob_sha": "39e2a62a2e3d9e81e0a675dfaa3bd5bc87e10ae0",
+      "sha256": "1d5d4daa8bdc16e348620cd590539a3a000d7e1eb21674904d77e92306b13ca6"
+    },
+    {
+      "path": "documents/references/pdf.md",
+      "git_blob_sha": "276b82d4da2ded2378209e12f7317a8fe223a99c",
+      "sha256": "32d5db843d3b6680e32d5dac1dfe8692248a65928f4f1e381ce4126c38a79f43"
+    },
+    {
+      "path": "documents/references/powerpoint.md",
+      "git_blob_sha": "7faebec3f649391318a37e62682ead90a11bf5e4",
+      "sha256": "956a0a9a26cdaa38684efdcf8eb071368f468ab12b72c803805893c84643882c"
+    },
+    {
+      "path": "documents/references/word.md",
+      "git_blob_sha": "69325d0ac4c3aa811560d72ffe6cb12bfd41aa14",
+      "sha256": "e8c5753fc22df79a3d3073695dded0b361992cf91e23b8449c7981da1ace33a8"
+    },
+    {
+      "path": "documents/scripts/validate-documents.py",
+      "git_blob_sha": "0ec61d8bf606b497dc113b970eb0e535c0e164f5",
+      "sha256": "7a4084b3217dd9b3024d4b0010a896c8d710a73f2eb73dc5747d0e34c37ba63e"
+    },
+    {
+      "path": "documents/templates/excel-template.md",
+      "git_blob_sha": "2178a5398929791a2154cfbb275b4050cc162548",
+      "sha256": "ccd5d64739c3fe29de47541383f0ca43c4c7547dc9b32e5c5b3d339c81568385"
+    },
+    {
+      "path": "documents/templates/pdf-template.md",
+      "git_blob_sha": "900b5d9ac9c721b261832a8dcf2a5875bfb591c3",
+      "sha256": "9a851ebb13a04f27d9bd984e93d95b30ee19422f4a00832861418e734eee2adf"
+    },
+    {
+      "path": "documents/templates/powerpoint-template.md",
+      "git_blob_sha": "c144d0654e3cf0566001c1e86f89c744a53d9d43",
+      "sha256": "1a3503f5f111c5620c272bba93ab269874d4777054b2c0c2ce850dbb655d36d0"
+    },
+    {
+      "path": "documents/templates/word-template.md",
+      "git_blob_sha": "37a712868daf827d8e2fd29860d16022ce22728b",
+      "sha256": "286e48bcae93d6346733cfe4acb8c01c649c5ac93da98e6ab26e8a8f41faa19d"
+    },
+    {
+      "path": "documents/tests/test_validate_documents.py",
+      "git_blob_sha": "2ab47d7eb4003dbf8d5aa506eb29588d5636bcd6",
+      "sha256": "56d3cdfc2a99af1dbddd7d74652318594c9484073f203a556c1072c1b5a4d873"
+    }
+  ],
+  "modifications": "none",
+  "execution": "not executed during download"
+}
