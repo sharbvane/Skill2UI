@@ -1,0 +1,76 @@
+{
+  "version": "0.1.0",
+  "date": "2026-10-12",
+  "environment": "Windows / Python 3.11.9 / Node 24.18.0 / Chromium",
+  "python_tests": {
+    "skipped": 0,
+    "passed": 53
+  },
+  "frontend_assertions": 19,
+  "browser_groups": [
+    {
+      "group": "A",
+      "status": "passed",
+      "input": {
+        "total": 900,
+        "people": 3,
+        "tip": 20
+      },
+      "result": {
+        "per_person": 360
+      },
+      "recovery": "people=0 rejected, people=3 recovered"
+    },
+    {
+      "group": "B",
+      "status": "passed",
+      "input": "CSV Alpha, One=10; Beta=30, filter=Beta",
+      "result": "one row, matching chart, bar→line and dark theme retained state, saved calculator restored"
+    },
+    {
+      "group": "C",
+      "status": "passed",
+      "source": "magnus919/agent-skills @ fb3253335cdb1156522901ef52f9897212b2e4b5",
+      "input": "original fixtures/sample.pdf; json=true; render_check=false",
+      "result": {
+        "status": "succeeded",
+        "summary": {
+          "files": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "errors": 0
+        },
+        "artifact": "_skill2ui_stdout.json"
+      },
+      "scope": "structural PDF validation; external renderers not exercised"
+    },
+    {
+      "group": "D",
+      "status": "passed",
+      "input": "script documents, registered native git, prose-only guide",
+      "result": "correct categories, guide non-executable, native Git invocation succeeded"
+    },
+    {
+      "group": "E",
+      "status": "passed",
+      "result": "invalid input/schema, missing/reused approval and foreign origin rejected; recovery, plan, weighted scores, text preview, 390px layout and keyboard checked",
+      "unitCoverage": "Missing dependencies, malicious archives, process cancellation/timeout, source tampering, restart recovery are covered in Python tests"
+    }
+  ],
+  "mcp_checks": [
+    "Official Node MCP Client initializes, lists tools/resources, reads App HTML, generates calculator over actual stdio",
+    "Official AppBridge/PostMessageTransport handshake and tool-input/tool-result notifications render actual resource inside sandboxed iframe",
+    "Opaque-origin sandbox rejects App access to parent DOM",
+    "App input -> official bridge tools/call -> real stdio evaluate -> live metrics: 900, 3, 20% = 360 per person / 1080 total",
+    "Server validation errors display, valid inputs recover, click/Enter follow-ups work without form permissions, theme edits preserve input state"
+  ],
+  "mcp_status": "passed",
+  "installed_wheel": "passed",
+  "skill_installation": "passed in isolated directory",
+  "limits": [
+    "Production Codex/Claude embedding not tested",
+    "MCP Skill execution is intentionally unavailable; use standalone runtime",
+    "Test iframe checks isolation and CSP, not the complete host sandbox proxy specification"
+  ]
+}

@@ -1,0 +1,9 @@
+include README.md README.zh-CN.md LICENSE CHANGELOG.md requirements.lock package.json package-lock.json
+recursive-include skill2ui *.py *.html *.js *.css *.svg *.md *.mjs *.txt
+recursive-include docs *.md *.png *.json
+recursive-include examples *
+recursive-include adapters *.js
+recursive-include scripts *.ps1
+recursive-include tests *.py *.mjs
+prune tests/artifacts
+global-exclude __pycache__ *.pyc

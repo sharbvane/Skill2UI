@@ -1,0 +1,15 @@
+{
+  "name": "skill2ui-development",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:mcp": "esbuild adapters/mcp-app.js --bundle --format=esm --minify --outfile=skill2ui/web/mcp/app.js",
+    "test:browser": "node tests/browser.mjs"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/ext-apps": "2.0.3",
+    "esbuild": "0.25.12",
+    "playwright": "1.58.2"
+  }
+}
